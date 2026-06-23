@@ -14,23 +14,17 @@ clean-targets:
   - "target"
   - "dbt_packages"
 
+
 models:
   projectnew:
-    
     bronze:
       +materialized: table
       +schema: bronze
-    silver: 
+    silver:
       +materialized: table
       +schema: silver
-    
     gold:
       +materialized: table
       +schema: gold
-      epheremal: 
-        +materialized: epheremal
-
-
-
-
-
+      ephemeral:
+        +materialized: ephemeral

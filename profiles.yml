@@ -3,7 +3,7 @@ DBT_Project:
     dev:
       account: MLPRSJJ-VA22107
       database: SNOWFLAKE_DB
-      password: ***********
+      password: **********
       role: Accountadmin
       schema: NEW_SCHEMA
       threads: 1
@@ -27,7 +27,7 @@ projectnew:
     dev:
       account: MLPRSJJ-VA22107
       database: SNOWFLAKE_DB
-      password: ********
+      password: ***********
       role: Accountadmin
       schema: NEW_SCHEMA
       threads: 1

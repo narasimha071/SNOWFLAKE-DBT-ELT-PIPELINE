@@ -1,22 +1,24 @@
 {% set congigs = [
     {
-        "table" : ref('silver_Bookings'),
+        "table" : "SNOWFLAKE_DB.SILVER.silver_Bookings",
         "columns" : "silver_Bookings.*",
-        "alias" : "silver_bookings"
+        "alias" : "silver_Bookings"
     },
     { 
-        "table" : ref('silver_listings'),
+        "table" : "SNOWFLAKE_DB.SILVER.silver_listings",
         "columns" : "silver_listings.HOST_ID, silver_listings.PROPERTY_TYPE, silver_listings.ROOM_TYPE, silver_listings.CITY, silver_listings.COUNTRY, silver_listings.ACCOMMODATES, silver_listings.BEDROOMS, silver_listings.BATHROOMS, silver_listings.PRICE_PER_NIGHT, silver_listings.PRICE_PER_NIGHT_TAG, silver_listings.CREATED_AT AS LISTING_CREATED_AT",
         "alias" : "silver_listings",
         "join_condition" : "silver_Bookings.listing_id = silver_listings.listing_id"
     },
     {
-        "table" : ref('silver_hosts'),
+        "table" : "SNOWFLAKE_DB.SILVER.silver_hosts",
         "columns" : "silver_hosts.HOST_NAME, silver_hosts.HOST_SINCE, silver_hosts.IS_SUPERHOST, silver_hosts.RESPONSE_RATE, silver_hosts.RESPONSE_RATE_QUALITY, silver_hosts.CREATED_AT AS HOST_CREATED_AT",
         "alias" : "silver_hosts",
         "join_condition" : "silver_listings.host_id = silver_hosts.host_id"
     }
 ] %}
+
+
 
 SELECT 
     {% for config in congigs %}
