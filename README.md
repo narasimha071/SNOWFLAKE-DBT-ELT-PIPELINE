@@ -8,6 +8,7 @@ Raw source data is stored in Amazon S3 and loaded into Snowflake staging tables.
 
 The project showcases modern data engineering practices for building scalable, maintainable, and production-ready data platforms.
 
+
 ---
 
 # 🏗️ Architecture
