@@ -1,7 +1,7 @@
 DBT_Project:
   outputs:
     dev:
-      account: MLPRSJJ-VA22107
+      account: ************
       database: SNOWFLAKE_DB
       password: **********
       role: Accountadmin
