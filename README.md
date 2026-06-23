@@ -290,6 +290,8 @@ Implemented reusable SQL generation using Jinja loops and custom macros.
 
 ```bash
 dbt debug
+----
+
 ```
 
 ## Run Models
