@@ -1,0 +1,8 @@
+sources:
+  - name: SNOWFLAKE_SCHEMA
+    database: SNOWFLAKE_DB
+    schema: SNOWFLAKE_SCHEMA
+    tables:
+      - name: Listings
+      - name: Hosts
+      - name: Bookings
